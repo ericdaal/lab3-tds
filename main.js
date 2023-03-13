@@ -4,12 +4,12 @@ let op_dos = document.getElementById('consulta_dos')
 
 op_uno.addEventListener('click', mostrar_fecha)
 async function mostrar_fecha() {
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             let fecha = document.getElementById('fecha')
-            if(fecha){
+            if (fecha) {
                 resolve(document.getElementById('respuesta').innerHTML = "La fecha ingresada es: " + fecha.value + "<br> Clima : " + getRandomWords(1, 1) + "<br> Temperatura : " + getRandomArbitrary(5, 30))
-            }else{
+            } else {
                 reject(Error('Fecha incorrecta'))
             }
         }, 3000)
@@ -18,7 +18,7 @@ async function mostrar_fecha() {
 
 op_dos.addEventListener('click', mostrar_hoy)
 async function mostrar_hoy() {
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             document.getElementById('respuesta').innerHTML = "El clima de hoy es: <br>Por la mañana será: " + getRandomWords(1, 1) + "<br> Por la tarde será : " + getRandomWords(1, 1) + "<br> Por la noche será : " + getRandomWords(1, 1);
         }, 3000)
